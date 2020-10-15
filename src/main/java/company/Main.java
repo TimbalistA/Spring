@@ -4,16 +4,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import company.config.ConfigClass;
-import company.model.Company;
+import company.model.Address;
 
 public class Main {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigClass.class);
 
-        Company company = applicationContext.getBean(Company.class);
+        Address address = applicationContext.getBean(Address.class);
 
-        System.out.println(company);
+        System.out.println(address);
     }
 
 }

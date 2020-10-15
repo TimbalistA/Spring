@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Engineer {
 
-    private final String name = "Ann";
+    private final Grade grade = Grade.EN;
 
-    private final Grade grade = Grade.ST;
+    private final String name = "Iwan";
 
     @Override
     public String toString() {

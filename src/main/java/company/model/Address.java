@@ -1,29 +1,24 @@
 package company.model;
 
-public class Address {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-    private final String country;
+public class Address {
 
     private final String name;
 
     private final int number;
 
+    private final String country;
+
+    @Autowired
+    @Qualifier("Nike")
+    private Company company;
+
     public Address(final String country, final String name, final int number) {
         this.country = country;
         this.name = name;
         this.number = number;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getNumber() {
-        return number;
     }
 
     @Override
@@ -32,6 +27,7 @@ public class Address {
                 "country='" + country + '\'' +
                 ", name='" + name + '\'' +
                 ", number=" + number +
+                ", company=" + company +
                 '}';
     }
 }
