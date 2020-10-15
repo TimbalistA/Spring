@@ -1,15 +1,17 @@
 package company.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Company {
 
-    private final String name;
+    private final String name = "Nike";
 
     private final Address address;
 
     private final Engineer engineer;
 
-    public Company(final String name, final Address address, final Engineer engineer) {
-        this.name = name;
+    public Company(final Address address, final Engineer engineer) {
         this.address = address;
         this.engineer = engineer;
     }

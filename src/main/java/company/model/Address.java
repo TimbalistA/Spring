@@ -1,18 +1,15 @@
 package company.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
-    private final String country;
+    private final String country = "New York";
 
-    private final String name;
+    private final String name = "Fifth Avenue";
 
-    private final int number;
-
-    public Address(final String country, final String name, final int number) {
-        this.country = country;
-        this.name = name;
-        this.number = number;
-    }
+    private final int number = 650;
 
     public String getCountry() {
         return country;

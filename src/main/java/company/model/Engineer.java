@@ -1,23 +1,13 @@
 package company.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Engineer {
 
-    private final String name;
+    private final String name = "Ann";
 
-    private final Grade grade;
-
-    public Engineer(final String name, final Grade grade) {
-        this.name = name;
-        this.grade = grade;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Grade getGrade() {
-        return grade;
-    }
+    private final Grade grade = Grade.ST;
 
     @Override
     public String toString() {
